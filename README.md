@@ -1,2 +1,0 @@
-# polynomials
-Created with CodeSandbox
