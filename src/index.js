@@ -27,11 +27,26 @@ function simplify(poly) {
 
   //i believe i can loop through all of these and if the strings contain the same letters i can add them together
   //luckily the character code of + and - are less than all the letters so this could help when we're arranging all the strings alphabetically
-  console.log(polyArr[0].charCodeAt(0));
-  console.log(polyArr[1].charCodeAt(0));
-  // for(let i=0; i<polyArr.length; i++){
-
-  // }
+  // console.log(polyArr[0].charCodeAt(0));
+  // console.log(polyArr[1].charCodeAt(0));
+  let unchangedPolyArr = polyArr;
+  // console.log(unchangedPolyArr);
+  for (let i = 0; i < polyArr.length; i++) {
+    for (let j = 0; j < polyArr[i].length; j++) {
+      if (polyArr[i].charCodeAt(j) > polyArr[i].charCodeAt(j + 1)) {
+        polyArr[i].replace(
+          polyArr[i].charAt(j + 1),
+          unchangedPolyArr[i].charAt(j)
+        );
+        polyArr[i].replace(
+          polyArr[i].charAt(j),
+          unchangedPolyArr[i].charAt(j + 1)
+        );
+      }
+    }
+  }
+  //nothing changed
+  console.log(polyArr);
 }
 
 simplify("dc+dcba"); //, "cd+abcd")
