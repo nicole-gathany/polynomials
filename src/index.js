@@ -23,6 +23,8 @@ function simplify(poly) {
     polyArr.push(str.substring(plusOrMinusArr[i], plusOrMinusArr[i + 1]));
   }
   console.log(polyArr);
+
+  //i believe i can loop through all of these and if the strings contain the same letters i can add them together
 }
 
 simplify("dc+dcba"); //, "cd+abcd")
