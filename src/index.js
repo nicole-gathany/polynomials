@@ -16,7 +16,7 @@ function simplify(poly) {
 
   plusOrMinusArr.push(str.length);
   console.log(str);
-  console.log(plusOrMinusArr);
+  // console.log(plusOrMinusArr);
   // console.log(str.substring(0, plusOrMinusArr[0]));
   let polyArr = [];
   for (let i = 0; i < plusOrMinusArr.length - 1; i++) {
