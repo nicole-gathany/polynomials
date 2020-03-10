@@ -10,9 +10,13 @@ function simplify(poly) {
       plusOrMinusArr.push(i);
     }
   }
+  if (plusOrMinusArr[0] !== 0) {
+    plusOrMinusArr.unshift(0);
+  }
+
+  plusOrMinusArr.push(str.length);
   console.log(str);
   console.log(plusOrMinusArr);
-  console.log(str.substring(0, plusOrMinusArr[0]));
 }
 
 simplify("dc+dcba"); //, "cd+abcd")
