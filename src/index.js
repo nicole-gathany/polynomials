@@ -12,6 +12,7 @@ function simplify(poly) {
   }
   console.log(str);
   console.log(plusOrMinusArr);
+  console.log(str.substring(0, plusOrMinusArr[0]));
 }
 
 simplify("dc+dcba"); //, "cd+abcd")
