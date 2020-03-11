@@ -10,7 +10,7 @@ function simplify(poly) {
       plusOrMinusArr.push(i);
     }
   }
-  //put in zero if it's not already there, because we want to substring the whole string
+  //puts in zero if it's not already there, because we want to substring the whole string
   if (plusOrMinusArr[0] !== 0) {
     plusOrMinusArr.unshift(0);
   }
@@ -23,12 +23,13 @@ function simplify(poly) {
   for (let i = 0; i < plusOrMinusArr.length - 1; i++) {
     polyArr.push(str.substring(plusOrMinusArr[i], plusOrMinusArr[i + 1]));
   }
-  console.log(polyArr);
+  // console.log(polyArr);
 
   //i believe i can loop through all of these and if the strings contain the same letters i can add them together
   //luckily the character code of + and - are less than all the letters so this could help when we're arranging all the strings alphabetically
   // console.log(polyArr[0].charCodeAt(0));
   // console.log(polyArr[1].charCodeAt(0));
+  //this was going to arrange all the variables but i am thinking that might be unnecessary
   let unchangedPolyArr = polyArr;
   // console.log(unchangedPolyArr);
   for (let i = 0; i < polyArr.length; i++) {
