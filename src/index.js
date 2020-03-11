@@ -23,31 +23,19 @@ function simplify(poly) {
   for (let i = 0; i < plusOrMinusArr.length - 1; i++) {
     polyArr.push(str.substring(plusOrMinusArr[i], plusOrMinusArr[i + 1]));
   }
-  // console.log(polyArr);
+  console.log(polyArr);
 
   //i believe i can loop through all of these and if the strings contain the same letters i can add them together
   //luckily the character code of + and - are less than all the letters so this could help when we're arranging all the strings alphabetically
-  // console.log(polyArr[0].charCodeAt(0));
-  // console.log(polyArr[1].charCodeAt(0));
+  console.log(polyArr[0].charCodeAt(0));
+  console.log(polyArr[1].charCodeAt(0));
+  console.log(polyArr[1].charCodeAt(1));
+
+  //for charCodeAt() lower case letters are 97 and up
+//0-9 are 48-57
+// + is 43 and - is 45
   //this was going to arrange all the variables but i am thinking that might be unnecessary
-  let unchangedPolyArr = polyArr;
-  // console.log(unchangedPolyArr);
-  for (let i = 0; i < polyArr.length; i++) {
-    for (let j = 0; j < polyArr[i].length; j++) {
-      if (polyArr[i].charCodeAt(j) > polyArr[i].charCodeAt(j + 1)) {
-        polyArr[i].replace(
-          polyArr[i].charAt(j + 1),
-          unchangedPolyArr[i].charAt(j)
-        );
-        polyArr[i].replace(
-          polyArr[i].charAt(j),
-          unchangedPolyArr[i].charAt(j + 1)
-        );
-      }
-    }
-  }
-  //nothing changed
-  console.log(polyArr);
+  
 }
 
 simplify("dc+dcba"); //, "cd+abcd")
@@ -59,3 +47,4 @@ simplify("a+ca-ab"); //,"a-ab+ac")
 simplify("xzy+zby"); //,"byz+xyz")
 simplify("-y+x"); //,"x-y")
 simplify("y-x"); //,"-x+y")
+simplify("A-9B")
